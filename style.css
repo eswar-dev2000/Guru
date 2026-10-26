@@ -1,0 +1,157 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
+  color: white;
+  text-align: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #190b35, #652b78, #ec6591);
+}
+
+.page {
+  width: min(750px, 100%);
+  padding: 35px 22px;
+  border: 1px solid #ffffff55;
+  border-radius: 25px;
+  background: #ffffff18;
+  box-shadow: 0 0 30px #ffafd955;
+  backdrop-filter: blur(10px);
+  animation: appear 1s ease;
+}
+
+h1 {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  text-shadow: 0 0 20px #ffb9e2;
+}
+
+h2 {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+p {
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.balloons {
+  font-size: 40px;
+  animation: bounce 2s infinite;
+}
+
+.cake {
+  font-size: clamp(90px, 20vw, 140px);
+  margin: 15px 0;
+  filter: drop-shadow(0 0 20px #ff9ed6);
+  animation: bounce 1.5s infinite;
+}
+
+.photo {
+  display: block;
+  width: min(350px, 90%);
+  height: 340px;
+  object-fit: cover;
+  margin: 25px auto;
+  border: 5px solid white;
+  border-radius: 22px;
+  box-shadow: 0 0 25px #ffb9e2;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 14px 24px;
+  border-radius: 30px;
+  color: #70204e;
+  background: #fff0f8;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 15px #ffafd9;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  background: #ffc9e6;
+}
+
+.secondary {
+  color: white;
+  background: #ffffff25;
+  border: 1px solid #ffffff88;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.big-heart {
+  font-size: 50px;
+  animation: pulse 1.5s infinite;
+}
+
+.final-page h2 {
+  color: #ffe2a8;
+}
+
+.heart {
+  position: fixed;
+  bottom: -40px;
+  pointer-events: none;
+  z-index: -1;
+  animation: floatUp linear forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 25px 15px;
+  }
+
+  .photo {
+    height: 280px;
+  }
+}
+
+
